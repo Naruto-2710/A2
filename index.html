@@ -34,9 +34,12 @@
             font-size: 18px;
         }
 
-        .hidden {
+        /* Center image properly */
+        #magicImage {
             display: none;
+            margin: 30px auto;
         }
+
     </style>
 </head>
 
@@ -56,8 +59,7 @@
 
 <div id="result"></div>
 
-<img id="magicImage" src="A2.jpeg" width="400" style="display:none; margin-top:20px;">
-
+<img id="magicImage" src="A2.jpeg" width="400">
 
 <script>
 
@@ -76,7 +78,6 @@ function checkAnswer() {
         "<p>🏰 To reach Hogwarts, find the magical images hidden around the campus.</p>" +
         "<p>🔍 Your adventure continues there!</p>";
 
-        // Show image
         document.getElementById("magicImage").style.display = "block";
 
     } else {
@@ -85,13 +86,12 @@ function checkAnswer() {
         "<h3>❌ Incorrect Answer</h3>" +
         "<p>The castle gates remain closed. Try again.</p>";
 
-        // Hide image if wrong
         document.getElementById("magicImage").style.display = "none";
     }
 }
 
 </script>
 
-
 </body>
 </html>
+

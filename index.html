@@ -56,7 +56,7 @@
 
 <div id="result"></div>
 
-<img src="./A2.jpeg" width="400">
+<img id="magicImage" src="A2.jpeg" width="400" style="display:none; margin-top:20px;">
 
 
 <script>
@@ -64,8 +64,6 @@
 function checkAnswer() {
 
     var userInput = document.getElementById("answer").value;
-
-    // Convert to lowercase for case-insensitive matching
     userInput = userInput.toLowerCase().trim();
 
     var correctAnswer = "dr. utara gogate";
@@ -78,16 +76,22 @@ function checkAnswer() {
         "<p>🏰 To reach Hogwarts, find the magical images hidden around the campus.</p>" +
         "<p>🔍 Your adventure continues there!</p>";
 
+        // Show image
+        document.getElementById("magicImage").style.display = "block";
+
     } else {
 
         document.getElementById("result").innerHTML =
         "<h3>❌ Incorrect Answer</h3>" +
         "<p>The castle gates remain closed. Try again.</p>";
 
+        // Hide image if wrong
+        document.getElementById("magicImage").style.display = "none";
     }
 }
 
 </script>
+
 
 </body>
 </html>
